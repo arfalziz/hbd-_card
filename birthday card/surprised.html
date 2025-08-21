@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Birthday Card Gallery</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffe0ec 0%, #e0f7fa 100%);
+            font-family: 'Pacifico', cursive;
+            margin: 0;
+            padding: 0;
+        }
+        .gallery-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255,255,255,0.85);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            position: relative;
+            overflow: hidden;
+        }
+        .gallery-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #e91e63;
+            margin-bottom: 24px;
+            letter-spacing: 2px;
+            text-shadow: 1px 2px 8px #fff6;
+        }
+        .gallery {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 18px;
+            padding: 0 10px;
+        }
+        .gallery img {
+            width: 17%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 16px #e91e6333;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: #fff;
+        }
+        .gallery img:hover {
+            transform: scale(1.08) rotate(-2deg);
+            box-shadow: 0 8px 32px #e91e6388;
+            z-index: 2;
+        }
+        /* Decorative flowers */
+        .flower {
+            position: absolute;
+            width: 60px;
+            z-index: 1;
+            opacity: 0.85;
+        }
+        .flower.flower1 { top: -20px; left: -20px; transform: rotate(-12deg);}
+        .flower.flower2 { top: -30px; right: -18px; transform: rotate(18deg);}
+        .flower.flower3 { bottom: -24px; left: 30px; transform: rotate(8deg);}
+        .flower.flower4 { bottom: -18px; right: 40px; transform: rotate(-8deg);}
+        /* Decorative confetti */
+        .confetti {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            opacity: 0.7;
+            z-index: 0;
+        }
+        .confetti.c1 { background: #e91e63; top: 20px; left: 120px;}
+        .confetti.c2 { background: #ffeb3b; top: 80px; right: 90px;}
+        .confetti.c3 { background: #00bcd4; bottom: 60px; left: 80px;}
+        .confetti.c4 { background: #8bc34a; bottom: 40px; right: 120px;}
+        .confetti.c5 { background: #ff9800; top: 140px; left: 60px;}
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <div class="gallery-title">Happy Birthday! 🎉</div>
+        <!-- Decorative flowers (SVG) -->
+        <img src="https://svgshare.com/i/14wR.svg" class="flower flower1" alt="Flower">
+        <img src="https://svgshare.com/i/14wR.svg" class="flower flower2" alt="Flower">
+        <img src="https://svgshare.com/i/14wR.svg" class="flower flower3" alt="Flower">
+        <img src="https://svgshare.com/i/14wR.svg" class="flower flower4" alt="Flower">
+        <!-- Confetti dots -->
+        <div class="confetti c1"></div>
+        <div class="confetti c2"></div>
+        <div class="confetti c3"></div>
+        <div class="confetti c4"></div>
+        <div class="confetti c5"></div>
+        <audio src="surprise.mp3" autoplay loop hidden></audio>
+        <!-- Gallery -->
+        <div class="gallery">
+            <img src="IMG-20240405-WA0013.jpg" alt="Foto 1">
+            <img src="IMG-20240429-WA0087.jpg" alt="Foto 2">
+            <img src="IMG-20240429-WA0089.jpg" alt="Foto 3">
+            <img src="IMG-20240429-WA0104.jpg" alt="Foto 4">
+            <img src="IMG-20240429-WA0108.jpg" alt="Foto 5">
+        </div>
+    </div>
+</body>
+</html>
